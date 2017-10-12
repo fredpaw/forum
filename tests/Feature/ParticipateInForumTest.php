@@ -24,20 +24,20 @@ class ParticipateInForumTest extends TestCase
     public function an_authenticated_user_may_participate_in_form_threads()
     {
         //create a user
-        $user = Factory('App\User')->create();
 
         //sign in the user
-        $this->be($user);
+        $this->be($user = factory('App\User')->create());
 
         //exist an thread
-        $thread = Factory('App\Thread')->create();
+        $thread = factory('App\Thread')->create();
 
         //user reply to the thread
-        $reply = Factory('App\Reply')->make();
-        $this->post('/threads/'.$thread->id.'/replies', $reply->toArray());
+        $reply = factory('App\Reply')->create();
+
+        $this->post($thread->path().'/replies', $reply->toArray());
 
         //The reply should be visible on the page.
-        $this->post($thread->path())
+        $this->get($thread->path())
              ->assertSee($reply->body);
     }
 }
