@@ -10,14 +10,11 @@ class ParticipateInForumTest extends TestCase
     use refreshDatabase;
 
     /** @test **/
-    public function unauthenticate_users_may_not_add_replies()
+    public function unauthenticated_users_may_not_add_replies()
     {
         $this->expectException('Illuminate\Auth\AuthenticationException');
 
-        $thread = Factory('App\Thread')->create();
-
-        $reply = Factory('App\Reply')->make();
-        $this->post($thread->path().'/replies', $reply->toArray());
+        $this->post('/threads/1/replies', []);
     }
 
     /** @test **/
@@ -32,7 +29,7 @@ class ParticipateInForumTest extends TestCase
         $thread = factory('App\Thread')->create();
 
         //user reply to the thread
-        $reply = factory('App\Reply')->create();
+        $reply = factory('App\Reply')->make();
 
         $this->post($thread->path().'/replies', $reply->toArray());
 
