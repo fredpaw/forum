@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-10-12 07:43:20
+-- Generation Time: 2017-10-24 08:45:16
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -577,7 +577,9 @@ INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `upda
 (497, 50, 547, 'Rem voluptas nostrum rem est ut ut. Rerum dolor voluptas dolor. Ut perferendis mollitia voluptate sed perferendis sunt necessitatibus.', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
 (498, 50, 548, 'Libero culpa aut delectus possimus rerum. Qui magni qui minima aut repellendus modi. Eveniet est sint quas aut non dolores commodi.', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
 (499, 50, 549, 'Quia et ea quam excepturi voluptate. Qui ratione et ut provident quia. Eius qui excepturi unde est qui. Accusamus accusamus et possimus dolorem repudiandae ut culpa.', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
-(500, 50, 550, 'Dignissimos inventore laudantium mollitia autem ut sapiente nostrum. Velit ea enim adipisci repellat. Neque voluptatem assumenda assumenda quia. Perferendis eveniet explicabo assumenda id temporibus aut.', '2017-10-10 16:01:18', '2017-10-10 16:01:18');
+(500, 50, 550, 'Dignissimos inventore laudantium mollitia autem ut sapiente nostrum. Velit ea enim adipisci repellat. Neque voluptatem assumenda assumenda quia. Perferendis eveniet explicabo assumenda id temporibus aut.', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
+(501, 1, 551, 'Give it a shot.', '2017-10-23 16:40:35', '2017-10-23 16:40:35'),
+(502, 45, 551, 'Give it a shot.', '2017-10-23 18:42:19', '2017-10-23 18:42:19');
 
 -- --------------------------------------------------------
 
@@ -1221,7 +1223,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (547, 'Maia Zulauf', 'eulalia.hodkiewicz@example.net', '$2y$10$lUxEz5Qvf1TciFfgNxkNcOer6vfhmEup8ACUxtrvWqvNqKiWzM0NO', 'sRTzZdJtsP', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
 (548, 'Nova Howe', 'andres.collier@example.com', '$2y$10$lUxEz5Qvf1TciFfgNxkNcOer6vfhmEup8ACUxtrvWqvNqKiWzM0NO', 'z6Dz2OjN6Y', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
 (549, 'Jaiden Cremin PhD', 'ssipes@example.net', '$2y$10$lUxEz5Qvf1TciFfgNxkNcOer6vfhmEup8ACUxtrvWqvNqKiWzM0NO', 'GZjMCra3cg', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
-(550, 'Dangelo Powlowski', 'hilpert.aisha@example.com', '$2y$10$lUxEz5Qvf1TciFfgNxkNcOer6vfhmEup8ACUxtrvWqvNqKiWzM0NO', 'c4eYLghMrp', '2017-10-10 16:01:18', '2017-10-10 16:01:18');
+(550, 'Dangelo Powlowski', 'hilpert.aisha@example.com', '$2y$10$lUxEz5Qvf1TciFfgNxkNcOer6vfhmEup8ACUxtrvWqvNqKiWzM0NO', 'c4eYLghMrp', '2017-10-10 16:01:18', '2017-10-10 16:01:18'),
+(551, 'JohnDoe', 'john@example.com', '$2y$10$8MT2hf.XjqNRZG7h/va2y.jHpDrNXHfWOMGw534YKD9nADzDQBk4i', 'VDBfAaXkaSU0T15SXMco8txAHIcuKpl84ToYouRne7p5xGy5kARjNwup81bq', '2017-10-23 16:16:19', '2017-10-23 16:16:19');
 
 --
 -- Indexes for dumped tables
@@ -1272,7 +1275,7 @@ ALTER TABLE `migrations`
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=501;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
 
 --
 -- 使用表AUTO_INCREMENT `threads`
@@ -1284,7 +1287,7 @@ ALTER TABLE `threads`
 -- 使用表AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=551;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=552;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
