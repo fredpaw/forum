@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-08 06:20:04
+-- Generation Time: 2017-11-08 07:56:53
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -212,7 +212,8 @@ INSERT INTO `threads` (`id`, `user_id`, `channel_id`, `title`, `body`, `created_
 (47, 47, 47, 'Ex a fugiat non maxime ipsam rerum quos excepturi.', 'Qui similique iure vel alias magni. Atque est animi dolorem repellat ipsa aut minus quae. Ipsum debitis enim ab in.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (48, 48, 48, 'Magni deserunt quam minima qui eius officiis optio.', 'Nihil totam reprehenderit tenetur rerum. Ratione voluptatem et aspernatur temporibus. Ducimus necessitatibus placeat similique ut iste voluptatum.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (49, 49, 49, 'Delectus repellat eius quisquam voluptas assumenda.', 'Mollitia repellendus necessitatibus nobis. Atque eveniet molestiae eveniet ullam eius. Et tempora est esse et officia laudantium. In cupiditate odit est et.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
-(50, 50, 50, 'Tempore accusantium corporis possimus sed et.', 'Corporis sint recusandae et et qui voluptatum nostrum. Saepe enim aut ullam repellendus saepe.', '2017-10-26 20:02:54', '2017-10-26 20:02:54');
+(50, 50, 50, 'Tempore accusantium corporis possimus sed et.', 'Corporis sint recusandae et et qui voluptatum nostrum. Saepe enim aut ullam repellendus saepe.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
+(51, 51, 1, 'First Thread with Channel', 'Suspendisse neque massa, fringilla vitae quam quis, volutpat vulputate dui. In est lectus, finibus ac cursus id, tincidunt eget leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque tristique ipsum eu finibus rhoncus. Duis iaculis eu lorem vitae cursus. Vestibulum ornare ante ac nisl pulvinar posuere at a sapien. Curabitur nec imperdiet mauris. Quisque ac urna quam. Nulla eu nulla tellus. Nullam ac consequat est. Mauris arcu ipsum, cursus quis dignissim sodales, laoreet sit amet augue. Pellentesque vel convallis nulla, id luctus urna. Vestibulum ut feugiat nisi.', '2017-11-07 19:49:34', '2017-11-07 19:49:34');
 
 -- --------------------------------------------------------
 
@@ -284,7 +285,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (47, 'Rusty Bednar', 'mconroy@example.net', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'HGAQTSJFOS', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (48, 'Immanuel Dibbert', 'hnicolas@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'DmXELW9cOU', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (49, 'Hank Hahn Sr.', 'lorenza.keebler@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'WsWI331LSz', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
-(50, 'Lori Wuckert', 'bkassulke@example.org', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'C4LHA1c2hO', '2017-10-26 20:02:52', '2017-10-26 20:02:52');
+(50, 'Lori Wuckert', 'bkassulke@example.org', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'C4LHA1c2hO', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
+(51, 'JohnDoe', 'john@example.com', '$2y$10$YWheDOTwf7BeW1IwZIAgMOWYyox2ZknbNbM4v7Vd93rmc/unUbLDS', NULL, '2017-11-07 19:15:39', '2017-11-07 19:15:39');
 
 --
 -- Indexes for dumped tables
@@ -353,13 +355,13 @@ ALTER TABLE `replies`
 -- 使用表AUTO_INCREMENT `threads`
 --
 ALTER TABLE `threads`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- 使用表AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
