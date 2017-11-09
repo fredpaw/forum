@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-08 07:56:53
+-- Generation Time: 2017-11-09 07:41:32
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -141,6 +141,13 @@ CREATE TABLE `replies` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 转存表中的数据 `replies`
+--
+
+INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `updated_at`) VALUES
+(1, 51, 51, 'And we can reply', '2017-11-08 15:31:42', '2017-11-08 15:31:42');
 
 -- --------------------------------------------------------
 
@@ -286,7 +293,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (48, 'Immanuel Dibbert', 'hnicolas@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'DmXELW9cOU', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (49, 'Hank Hahn Sr.', 'lorenza.keebler@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'WsWI331LSz', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (50, 'Lori Wuckert', 'bkassulke@example.org', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'C4LHA1c2hO', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
-(51, 'JohnDoe', 'john@example.com', '$2y$10$YWheDOTwf7BeW1IwZIAgMOWYyox2ZknbNbM4v7Vd93rmc/unUbLDS', NULL, '2017-11-07 19:15:39', '2017-11-07 19:15:39');
+(51, 'JohnDoe', 'john@example.com', '$2y$10$YWheDOTwf7BeW1IwZIAgMOWYyox2ZknbNbM4v7Vd93rmc/unUbLDS', 'Rwr6tRZNEhDNA3NAZBLJAOoZULtuqsLWmDCYtW5Wv53DnLoQ9drzTiS0BOep', '2017-11-07 19:15:39', '2017-11-07 19:15:39');
 
 --
 -- Indexes for dumped tables
@@ -349,7 +356,7 @@ ALTER TABLE `migrations`
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- 使用表AUTO_INCREMENT `threads`
