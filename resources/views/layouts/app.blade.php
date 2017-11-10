@@ -12,9 +12,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        body {padding-bottom: 100px;}
+        .level {display:flex; align-items:center; }
+        .flex {flex:1;}
+    </style>
 </head>
 <body>
-    <div id="app" style="padding-bottom:100px;">
+    <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -43,6 +49,7 @@
                                 @if (auth()->check())
                                     <li><a href="{{ url('/').'/threads?by='.auth()->user()->name }}">My Threads</a></li>
                                 @endif
+                                <li><a href="{{ url('/').'/threads?popular=1' }}">Popular Threads</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ url('/').'/threads/create' }}">New Thread</a></li>
