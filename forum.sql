@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-09 07:41:32
+-- Generation Time: 2017-11-10 06:04:10
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -147,7 +147,20 @@ CREATE TABLE `replies` (
 --
 
 INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `updated_at`) VALUES
-(1, 51, 51, 'And we can reply', '2017-11-08 15:31:42', '2017-11-08 15:31:42');
+(1, 51, 51, 'And we can reply', '2017-11-08 15:31:42', '2017-11-08 15:31:42'),
+(2, 42, 51, 'First comments', '2017-11-09 17:23:18', '2017-11-09 17:23:18'),
+(3, 42, 51, 'Second comments', '2017-11-09 17:23:32', '2017-11-09 17:23:32'),
+(4, 42, 51, 'Third comments', '2017-11-09 17:29:06', '2017-11-09 17:29:06'),
+(5, 42, 51, 'Fourth comment', '2017-11-09 17:29:15', '2017-11-09 17:29:15'),
+(6, 42, 51, 'Fifth comment', '2017-11-09 17:29:24', '2017-11-09 17:29:24'),
+(7, 42, 51, 'Sixth comment', '2017-11-09 17:29:31', '2017-11-09 17:29:31'),
+(8, 42, 51, 'Seventh comment', '2017-11-09 17:29:43', '2017-11-09 17:29:43'),
+(9, 42, 51, 'Eighth comment', '2017-11-09 17:29:52', '2017-11-09 17:29:52'),
+(10, 42, 51, 'Ninth comment', '2017-11-09 17:30:00', '2017-11-09 17:30:00'),
+(11, 42, 51, 'Tenth comment', '2017-11-09 17:30:07', '2017-11-09 17:30:07'),
+(12, 42, 51, 'Eleventh comment', '2017-11-09 17:30:15', '2017-11-09 17:30:15'),
+(13, 42, 51, 'Twelfth comment', '2017-11-09 17:30:47', '2017-11-09 17:30:47'),
+(14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08');
 
 -- --------------------------------------------------------
 
@@ -356,7 +369,7 @@ ALTER TABLE `migrations`
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用表AUTO_INCREMENT `threads`
