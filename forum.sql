@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-27 04:16:13
+-- Generation Time: 2017-11-27 06:05:16
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -95,6 +95,28 @@ INSERT INTO `channels` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `favorited_id` int(10) UNSIGNED NOT NULL,
+  `favorited_type` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 转存表中的数据 `favorites`
+--
+
+INSERT INTO `favorites` (`id`, `user_id`, `favorited_id`, `favorited_type`, `created_at`, `updated_at`) VALUES
+(1, 51, 1, 'App\\Reply', '2017-11-26 17:41:43', '2017-11-26 17:41:43');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `migrations`
 --
 
@@ -113,7 +135,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2014_10_12_100000_create_password_resets_table', 1),
 (11, '2017_10_11_013554_create_threads_table', 1),
 (12, '2017_10_11_023011_create_replies_table', 1),
-(13, '2017_10_27_043600_create_channels_table', 1);
+(13, '2017_10_27_043600_create_channels_table', 1),
+(14, '2017_11_27_020011_create_favorites_table', 2);
 
 -- --------------------------------------------------------
 
@@ -319,6 +342,13 @@ ALTER TABLE `channels`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `favorites_user_id_favorited_id_favorited_type_unique` (`user_id`,`favorited_id`,`favorited_type`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -360,10 +390,16 @@ ALTER TABLE `channels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
+-- 使用表AUTO_INCREMENT `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- 使用表AUTO_INCREMENT `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用表AUTO_INCREMENT `replies`
