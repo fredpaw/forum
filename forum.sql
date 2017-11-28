@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-27 06:05:16
+-- Generation Time: 2017-11-28 03:34:12
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -112,7 +112,11 @@ CREATE TABLE `favorites` (
 --
 
 INSERT INTO `favorites` (`id`, `user_id`, `favorited_id`, `favorited_type`, `created_at`, `updated_at`) VALUES
-(1, 51, 1, 'App\\Reply', '2017-11-26 17:41:43', '2017-11-26 17:41:43');
+(1, 51, 1, 'App\\Reply', '2017-11-26 17:41:43', '2017-11-26 17:41:43'),
+(2, 51, 2, 'App\\Reply', '2017-11-27 12:49:49', '2017-11-27 12:49:49'),
+(3, 51, 3, 'App\\Reply', '2017-11-27 12:49:52', '2017-11-27 12:49:52'),
+(4, 51, 4, 'App\\Reply', '2017-11-27 12:49:57', '2017-11-27 12:49:57'),
+(5, 51, 8, 'App\\Reply', '2017-11-27 15:33:10', '2017-11-27 15:33:10');
 
 -- --------------------------------------------------------
 
@@ -393,7 +397,7 @@ ALTER TABLE `channels`
 -- 使用表AUTO_INCREMENT `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用表AUTO_INCREMENT `migrations`
