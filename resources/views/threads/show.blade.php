@@ -6,7 +6,20 @@
             <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a href="{{ url("/profiles/".$thread->creator->name) }}">{{ $thread->creator->name }}</a> posted: {{ $thread->title }}
+                        <div class="level">
+                            <span class="flex">
+                                <a href="{{ url("/profiles/".$thread->creator->name) }}">{{ $thread->creator->name }}</a> posted: {{ $thread->title }}
+                            </span>
+
+                            @if (Auth::check())
+                                <form action="{{ $thread->path() }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+
+                                    <button type="submit" class="btn btn-link">Delete Thread</button>
+                                </form>
+                            @endif
+                        </div>
                     </div>
 
                     <div class="panel-body">
@@ -27,13 +40,15 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <textarea name="body" id="body" class="form-control" placeholder="Have something to say" rows="5"></textarea>
+                            <textarea name="body" id="body" class="form-control" placeholder="Have something to say"
+                                      rows="5"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-default">Post</button>
                     </form>
                 @else
-                    <p style="text-align: center">Please <a href="{{ route('login') }}">Sign in</a> to participate in this discussion </p>
+                    <p style="text-align: center">Please <a href="{{ route('login') }}">Sign in</a> to participate in
+                        this discussion </p>
                 @endif
 
             </div>
