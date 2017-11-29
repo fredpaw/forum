@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-29 04:42:00
+-- Generation Time: 2017-11-29 07:01:13
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `forum`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `activities`
+--
+
+CREATE TABLE `activities` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `subject_id` int(10) UNSIGNED NOT NULL,
+  `subject_type` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 转存表中的数据 `activities`
+--
+
+INSERT INTO `activities` (`id`, `user_id`, `subject_id`, `subject_type`, `type`, `created_at`, `updated_at`) VALUES
+(1, 51, 51, 'App\\Thread', 'created_thread', '2017-11-28 18:59:49', '2017-11-28 18:59:49'),
+(2, 51, 15, 'App\\Reply', 'created_reply', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
 
 -- --------------------------------------------------------
 
@@ -140,7 +164,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (11, '2017_10_11_013554_create_threads_table', 1),
 (12, '2017_10_11_023011_create_replies_table', 1),
 (13, '2017_10_27_043600_create_channels_table', 1),
-(14, '2017_11_27_020011_create_favorites_table', 2);
+(14, '2017_11_27_020011_create_favorites_table', 2),
+(15, '2017_11_29_044252_create_activities_table', 3);
 
 -- --------------------------------------------------------
 
@@ -186,7 +211,8 @@ INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `upda
 (11, 42, 51, 'Tenth comment', '2017-11-09 17:30:07', '2017-11-09 17:30:07'),
 (12, 42, 51, 'Eleventh comment', '2017-11-09 17:30:15', '2017-11-09 17:30:15'),
 (13, 42, 51, 'Twelfth comment', '2017-11-09 17:30:47', '2017-11-09 17:30:47'),
-(14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08');
+(14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08'),
+(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
 
 -- --------------------------------------------------------
 
@@ -258,7 +284,8 @@ INSERT INTO `threads` (`id`, `user_id`, `channel_id`, `title`, `body`, `created_
 (47, 47, 47, 'Ex a fugiat non maxime ipsam rerum quos excepturi.', 'Qui similique iure vel alias magni. Atque est animi dolorem repellat ipsa aut minus quae. Ipsum debitis enim ab in.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (48, 48, 48, 'Magni deserunt quam minima qui eius officiis optio.', 'Nihil totam reprehenderit tenetur rerum. Ratione voluptatem et aspernatur temporibus. Ducimus necessitatibus placeat similique ut iste voluptatum.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (49, 49, 49, 'Delectus repellat eius quisquam voluptas assumenda.', 'Mollitia repellendus necessitatibus nobis. Atque eveniet molestiae eveniet ullam eius. Et tempora est esse et officia laudantium. In cupiditate odit est et.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
-(50, 50, 50, 'Tempore accusantium corporis possimus sed et.', 'Corporis sint recusandae et et qui voluptatum nostrum. Saepe enim aut ullam repellendus saepe.', '2017-10-26 20:02:54', '2017-10-26 20:02:54');
+(50, 50, 50, 'Tempore accusantium corporis possimus sed et.', 'Corporis sint recusandae et et qui voluptatum nostrum. Saepe enim aut ullam repellendus saepe.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
+(51, 51, 36, 'Activities Test', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, odio id finibus ultricies, lectus nisi ullamcorper ipsum, in maximus mi tellus feugiat elit. Integer ornare ac lacus quis sollicitudin. Maecenas fringilla sem a turpis eleifend malesuada. Nullam nisl eros, porta ut congue ac, iaculis id diam. Duis quis ligula eget orci consectetur volutpat eu eget urna. Aenean dictum arcu in enim consequat vehicula. Sed massa enim, accumsan vel feugiat ut, euismod ut lectus. Phasellus suscipit sapien ac velit fermentum feugiat. Maecenas libero erat, porttitor eu iaculis quis, facilisis sit amet nulla. Etiam vitae volutpat nunc. Duis at efficitur ex, eget mattis mi. Sed aliquet, urna ac viverra rutrum, nulla nunc consequat mauris, non fermentum ante massa viverra orci. Aenean dignissim magna est, id dapibus dolor luctus sit amet. Integer molestie mollis dolor id semper. Aenean nibh mi, euismod non neque sit amet, posuere interdum ligula. Proin et nulla ut ipsum sollicitudin commodo non ac mauris.', '2017-11-28 18:59:48', '2017-11-28 18:59:48');
 
 -- --------------------------------------------------------
 
@@ -338,6 +365,14 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 --
 
 --
+-- Indexes for table `activities`
+--
+ALTER TABLE `activities`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `activities_user_id_index` (`user_id`),
+  ADD KEY `activities_subject_id_index` (`subject_id`);
+
+--
 -- Indexes for table `channels`
 --
 ALTER TABLE `channels`
@@ -386,6 +421,12 @@ ALTER TABLE `users`
 --
 
 --
+-- 使用表AUTO_INCREMENT `activities`
+--
+ALTER TABLE `activities`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- 使用表AUTO_INCREMENT `channels`
 --
 ALTER TABLE `channels`
@@ -401,19 +442,19 @@ ALTER TABLE `favorites`
 -- 使用表AUTO_INCREMENT `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- 使用表AUTO_INCREMENT `threads`
 --
 ALTER TABLE `threads`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- 使用表AUTO_INCREMENT `users`
