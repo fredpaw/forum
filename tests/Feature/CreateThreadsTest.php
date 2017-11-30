@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Activity;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -82,7 +83,7 @@ class CreateThreadsTest extends TestCase
     }
 
     /** @test **/
-    public function a_thread_can_be_deleted()
+    public function authorized_users_can_delete_threads()
     {
         $this->signIn();
 
@@ -95,6 +96,7 @@ class CreateThreadsTest extends TestCase
 
         $this->assertDatabaseMissing('threads', ['id' => $thread->id]);
         $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+        $this->assertEquals(0, Activity::count());
     }
 
 
