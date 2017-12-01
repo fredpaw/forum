@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-30 04:58:18
+-- Generation Time: 2017-12-01 05:42:25
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -44,7 +44,10 @@ CREATE TABLE `activities` (
 
 INSERT INTO `activities` (`id`, `user_id`, `subject_id`, `subject_type`, `type`, `created_at`, `updated_at`) VALUES
 (1, 51, 51, 'App\\Thread', 'created_thread', '2017-11-28 18:59:49', '2017-11-28 18:59:49'),
-(2, 51, 15, 'App\\Reply', 'created_reply', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
+(2, 51, 15, 'App\\Reply', 'created_reply', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
+(3, 51, 52, 'App\\Thread', 'created_thread', '2017-11-29 20:15:02', '2017-11-29 20:15:02'),
+(4, 51, 16, 'App\\Reply', 'created_reply', '2017-11-29 20:15:51', '2017-11-29 20:15:51'),
+(5, 51, 6, 'App\\Favorite', 'created_favorite', '2017-11-30 17:26:46', '2017-11-30 17:26:46');
 
 -- --------------------------------------------------------
 
@@ -140,7 +143,8 @@ INSERT INTO `favorites` (`id`, `user_id`, `favorited_id`, `favorited_type`, `cre
 (2, 51, 2, 'App\\Reply', '2017-11-27 12:49:49', '2017-11-27 12:49:49'),
 (3, 51, 3, 'App\\Reply', '2017-11-27 12:49:52', '2017-11-27 12:49:52'),
 (4, 51, 4, 'App\\Reply', '2017-11-27 12:49:57', '2017-11-27 12:49:57'),
-(5, 51, 8, 'App\\Reply', '2017-11-27 15:33:10', '2017-11-27 15:33:10');
+(5, 51, 8, 'App\\Reply', '2017-11-27 15:33:10', '2017-11-27 15:33:10'),
+(6, 51, 16, 'App\\Reply', '2017-11-30 17:26:46', '2017-11-30 17:26:46');
 
 -- --------------------------------------------------------
 
@@ -212,7 +216,8 @@ INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `upda
 (12, 42, 51, 'Eleventh comment', '2017-11-09 17:30:15', '2017-11-09 17:30:15'),
 (13, 42, 51, 'Twelfth comment', '2017-11-09 17:30:47', '2017-11-09 17:30:47'),
 (14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08'),
-(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
+(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
+(16, 52, 51, 'afafawef', '2017-11-29 20:15:51', '2017-11-29 20:15:51');
 
 -- --------------------------------------------------------
 
@@ -285,7 +290,8 @@ INSERT INTO `threads` (`id`, `user_id`, `channel_id`, `title`, `body`, `created_
 (48, 48, 48, 'Magni deserunt quam minima qui eius officiis optio.', 'Nihil totam reprehenderit tenetur rerum. Ratione voluptatem et aspernatur temporibus. Ducimus necessitatibus placeat similique ut iste voluptatum.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (49, 49, 49, 'Delectus repellat eius quisquam voluptas assumenda.', 'Mollitia repellendus necessitatibus nobis. Atque eveniet molestiae eveniet ullam eius. Et tempora est esse et officia laudantium. In cupiditate odit est et.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
 (50, 50, 50, 'Tempore accusantium corporis possimus sed et.', 'Corporis sint recusandae et et qui voluptatum nostrum. Saepe enim aut ullam repellendus saepe.', '2017-10-26 20:02:54', '2017-10-26 20:02:54'),
-(51, 51, 36, 'Activities Test', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, odio id finibus ultricies, lectus nisi ullamcorper ipsum, in maximus mi tellus feugiat elit. Integer ornare ac lacus quis sollicitudin. Maecenas fringilla sem a turpis eleifend malesuada. Nullam nisl eros, porta ut congue ac, iaculis id diam. Duis quis ligula eget orci consectetur volutpat eu eget urna. Aenean dictum arcu in enim consequat vehicula. Sed massa enim, accumsan vel feugiat ut, euismod ut lectus. Phasellus suscipit sapien ac velit fermentum feugiat. Maecenas libero erat, porttitor eu iaculis quis, facilisis sit amet nulla. Etiam vitae volutpat nunc. Duis at efficitur ex, eget mattis mi. Sed aliquet, urna ac viverra rutrum, nulla nunc consequat mauris, non fermentum ante massa viverra orci. Aenean dignissim magna est, id dapibus dolor luctus sit amet. Integer molestie mollis dolor id semper. Aenean nibh mi, euismod non neque sit amet, posuere interdum ligula. Proin et nulla ut ipsum sollicitudin commodo non ac mauris.', '2017-11-28 18:59:48', '2017-11-28 18:59:48');
+(51, 51, 36, 'Activities Test', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, odio id finibus ultricies, lectus nisi ullamcorper ipsum, in maximus mi tellus feugiat elit. Integer ornare ac lacus quis sollicitudin. Maecenas fringilla sem a turpis eleifend malesuada. Nullam nisl eros, porta ut congue ac, iaculis id diam. Duis quis ligula eget orci consectetur volutpat eu eget urna. Aenean dictum arcu in enim consequat vehicula. Sed massa enim, accumsan vel feugiat ut, euismod ut lectus. Phasellus suscipit sapien ac velit fermentum feugiat. Maecenas libero erat, porttitor eu iaculis quis, facilisis sit amet nulla. Etiam vitae volutpat nunc. Duis at efficitur ex, eget mattis mi. Sed aliquet, urna ac viverra rutrum, nulla nunc consequat mauris, non fermentum ante massa viverra orci. Aenean dignissim magna est, id dapibus dolor luctus sit amet. Integer molestie mollis dolor id semper. Aenean nibh mi, euismod non neque sit amet, posuere interdum ligula. Proin et nulla ut ipsum sollicitudin commodo non ac mauris.', '2017-11-28 18:59:48', '2017-11-28 18:59:48'),
+(52, 51, 2, 'awff', 'afwefaewfafawef', '2017-11-29 20:15:02', '2017-11-29 20:15:02');
 
 -- --------------------------------------------------------
 
@@ -424,7 +430,7 @@ ALTER TABLE `users`
 -- 使用表AUTO_INCREMENT `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用表AUTO_INCREMENT `channels`
@@ -436,7 +442,7 @@ ALTER TABLE `channels`
 -- 使用表AUTO_INCREMENT `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用表AUTO_INCREMENT `migrations`
@@ -448,13 +454,13 @@ ALTER TABLE `migrations`
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- 使用表AUTO_INCREMENT `threads`
 --
 ALTER TABLE `threads`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- 使用表AUTO_INCREMENT `users`
