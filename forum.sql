@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-12-01 05:42:25
+-- Generation Time: 2017-12-01 06:41:41
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -45,9 +45,7 @@ CREATE TABLE `activities` (
 INSERT INTO `activities` (`id`, `user_id`, `subject_id`, `subject_type`, `type`, `created_at`, `updated_at`) VALUES
 (1, 51, 51, 'App\\Thread', 'created_thread', '2017-11-28 18:59:49', '2017-11-28 18:59:49'),
 (2, 51, 15, 'App\\Reply', 'created_reply', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
-(3, 51, 52, 'App\\Thread', 'created_thread', '2017-11-29 20:15:02', '2017-11-29 20:15:02'),
-(4, 51, 16, 'App\\Reply', 'created_reply', '2017-11-29 20:15:51', '2017-11-29 20:15:51'),
-(5, 51, 6, 'App\\Favorite', 'created_favorite', '2017-11-30 17:26:46', '2017-11-30 17:26:46');
+(3, 51, 52, 'App\\Thread', 'created_thread', '2017-11-29 20:15:02', '2017-11-29 20:15:02');
 
 -- --------------------------------------------------------
 
@@ -216,8 +214,7 @@ INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `upda
 (12, 42, 51, 'Eleventh comment', '2017-11-09 17:30:15', '2017-11-09 17:30:15'),
 (13, 42, 51, 'Twelfth comment', '2017-11-09 17:30:47', '2017-11-09 17:30:47'),
 (14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08'),
-(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
-(16, 52, 51, 'afafawef', '2017-11-29 20:15:51', '2017-11-29 20:15:51');
+(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
 
 -- --------------------------------------------------------
 
@@ -364,7 +361,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (48, 'Immanuel Dibbert', 'hnicolas@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'DmXELW9cOU', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (49, 'Hank Hahn Sr.', 'lorenza.keebler@example.com', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'WsWI331LSz', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
 (50, 'Lori Wuckert', 'bkassulke@example.org', '$2y$10$jrFrgGGwsgzJ8wUbjzMIRu0Ewqn0S6OyBnxz9cDq1XpZvL/jw767a', 'C4LHA1c2hO', '2017-10-26 20:02:52', '2017-10-26 20:02:52'),
-(51, 'JohnDoe', 'john@example.com', '$2y$10$YWheDOTwf7BeW1IwZIAgMOWYyox2ZknbNbM4v7Vd93rmc/unUbLDS', 'FJJeZ2YYm2YxovDnGZ5rypC8DALIb4dw3qRJ5XpTiCCTnIMuO0LXkV6i8ySR', '2017-11-07 19:15:39', '2017-11-07 19:15:39');
+(51, 'JohnDoe', 'john@example.com', '$2y$10$YWheDOTwf7BeW1IwZIAgMOWYyox2ZknbNbM4v7Vd93rmc/unUbLDS', 'VRjF7cpqayw2OpbBEs5uh05EbRqp1Pk3ai9dTaoMajMVbO3ABRkw61oeG54i', '2017-11-07 19:15:39', '2017-11-07 19:15:39');
 
 --
 -- Indexes for dumped tables

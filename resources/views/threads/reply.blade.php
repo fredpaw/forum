@@ -2,7 +2,8 @@
     <div class="panel-heading">
         <div class="level">
             <h5 class="flex">
-                <a href="{{ url("/profiles/".$reply->owner->name) }}">{{ $reply->owner->name }}</a> said {{ $reply->created_at->diffForHumans()  }} ...
+                <a href="{{ url("/profiles/".$reply->owner->name) }}">{{ $reply->owner->name }}</a>
+                said {{ $reply->created_at->diffForHumans()  }} ...
             </h5>
 
             <div>
@@ -21,4 +22,15 @@
             {{ $reply->body }}
         </article>
     </div>
+
+    @can ('update', $reply)
+        <div class="panel-footer">
+            <form action="{{ url('/replies/'. $reply->id) }}" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+
+                <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+            </form>
+        </div>
+    @endcan
 </div>
