@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-12-01 06:41:41
+-- Generation Time: 2017-12-01 08:09:03
 -- 服务器版本： 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -45,7 +45,9 @@ CREATE TABLE `activities` (
 INSERT INTO `activities` (`id`, `user_id`, `subject_id`, `subject_type`, `type`, `created_at`, `updated_at`) VALUES
 (1, 51, 51, 'App\\Thread', 'created_thread', '2017-11-28 18:59:49', '2017-11-28 18:59:49'),
 (2, 51, 15, 'App\\Reply', 'created_reply', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
-(3, 51, 52, 'App\\Thread', 'created_thread', '2017-11-29 20:15:02', '2017-11-29 20:15:02');
+(3, 51, 52, 'App\\Thread', 'created_thread', '2017-11-29 20:15:02', '2017-11-29 20:15:02'),
+(6, 51, 17, 'App\\Reply', 'created_reply', '2017-11-30 18:51:07', '2017-11-30 18:51:07'),
+(7, 51, 18, 'App\\Reply', 'created_reply', '2017-11-30 19:02:50', '2017-11-30 19:02:50');
 
 -- --------------------------------------------------------
 
@@ -214,7 +216,9 @@ INSERT INTO `replies` (`id`, `thread_id`, `user_id`, `body`, `created_at`, `upda
 (12, 42, 51, 'Eleventh comment', '2017-11-09 17:30:15', '2017-11-09 17:30:15'),
 (13, 42, 51, 'Twelfth comment', '2017-11-09 17:30:47', '2017-11-09 17:30:47'),
 (14, 42, 51, 'Thirteenth comment', '2017-11-09 17:31:08', '2017-11-09 17:31:08'),
-(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03');
+(15, 51, 51, 'This is the reply for activities test.', '2017-11-28 19:00:03', '2017-11-28 19:00:03'),
+(17, 52, 51, 'Changed again', '2017-11-30 18:51:07', '2017-11-30 20:07:16'),
+(18, 52, 51, 'changed', '2017-11-30 19:02:50', '2017-11-30 20:08:35');
 
 -- --------------------------------------------------------
 
@@ -427,7 +431,7 @@ ALTER TABLE `users`
 -- 使用表AUTO_INCREMENT `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用表AUTO_INCREMENT `channels`
@@ -451,7 +455,7 @@ ALTER TABLE `migrations`
 -- 使用表AUTO_INCREMENT `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- 使用表AUTO_INCREMENT `threads`

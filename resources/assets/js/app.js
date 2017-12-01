@@ -16,14 +16,15 @@ window.Vue = require('vue');
  */
 
 Vue.component('flash', require('./components/Flash.vue'));
+Vue.component('reply', require('./components/Reply.vue'));
 
 const app = new Vue({
     el: '#app'
 });
-
 
 window.events = new Vue();
 
 window.flash = function (message) {
     window.events.$emit('flash', message);
 }; //flash('my new flash message')
+
