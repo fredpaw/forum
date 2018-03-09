@@ -23,6 +23,8 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+window.axios.defaults.baseURL = "http://localhost/forum/public/";
+
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -43,4 +45,8 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
+window.events = new Vue();
 
+window.flash = function (message) {
+    window.events.$emit('flash', message);
+}; //flash('my new flash message')

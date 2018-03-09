@@ -5,9 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+window.Vue = require('vue');
+
 require('./bootstrap');
 
-window.Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -22,9 +23,4 @@ const app = new Vue({
     el: '#app'
 });
 
-window.events = new Vue();
-
-window.flash = function (message) {
-    window.events.$emit('flash', message);
-}; //flash('my new flash message')
 

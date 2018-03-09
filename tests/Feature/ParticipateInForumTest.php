@@ -78,7 +78,7 @@ class ParticipateInForumTest extends TestCase
     }
 
     /** @test **/
-    public function authorized_users_can_update_replies()
+    public function authorized_usersan__cupdate_replies()
     {
         $this->signIn();
 

@@ -34,13 +34,14 @@
         @can ('update', $reply)
             <div class="panel-footer level">
                 <button class="btn btn-xs mr-1" @click="editing = true">Edit</button>
+                <button class="btn btn-xs btn-danger mr-1" @click="destroy">Delete</button>
 
-                <form action="{{ url('/replies/'. $reply->id) }}" method="POST">
-                    {{ csrf_field() }}
-                    {{ method_field('DELETE') }}
+                {{--<form action="{{ url('/replies/'. $reply->id) }}" method="POST">--}}
+                    {{--{{ csrf_field() }}--}}
+                    {{--{{ method_field('DELETE') }}--}}
 
-                    <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                </form>
+                    {{--<button type="submit" class="btn btn-danger btn-xs">Delete</button>--}}
+                {{--</form>--}}
             </div>
         @endcan
     </div>
