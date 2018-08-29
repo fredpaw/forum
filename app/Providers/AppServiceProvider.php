@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
             });
             $view->with('channels', $channels);
         });
+//        \View::share('channels', Channel::all());
     }
 
     /**
